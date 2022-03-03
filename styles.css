@@ -79,7 +79,8 @@ body {
   height: 24px;
 }
 
-.dice-background:hover {
+.dice-background:hover,
+.dice-background:active {
   box-shadow: 0px 0px 20px 5px var(--highlight-color);
   cursor: pointer;
 }
