@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-content: center;
   min-width: 375px;
-  min-height: 667px;
+  height: 100vh;
 }
 
 .card-container {
@@ -82,4 +82,10 @@ body {
 .dice-background:hover {
   box-shadow: 0px 0px 20px 5px var(--highlight-color);
   cursor: pointer;
+}
+
+@media (min-width: 750px) {
+  .divider {
+    content: url("images/pattern-divider-desktop.svg");
+  }
 }
