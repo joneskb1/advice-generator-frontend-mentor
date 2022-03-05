@@ -1,6 +1,7 @@
 const dice = document.querySelector(".dice");
 const quoteText = document.querySelector(".quote-text");
 const adviceText = document.querySelector(".advice-text");
+const diceBackground = document.querySelector(".dice-background");
 
 async function fetchData() {
   try {
@@ -16,4 +17,10 @@ async function fetchData() {
   }
 }
 
+function removeGlow() {
+  diceBackground.style.boxShadow = "none";
+}
+
 dice.addEventListener("click", fetchData);
+dice.addEventListener("touchstart", fetchData);
+dice.addEventListener("touchend", removeGlow);
