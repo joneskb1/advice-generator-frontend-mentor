@@ -5,7 +5,6 @@ const diceBackground = document.querySelector(".dice-background");
 
 async function fetchData() {
   try {
-    diceBackground.style.boxShadow = "0px 0px 20px 5px #52ffa8";
     const response = await fetch("https://api.adviceslip.com/advice");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -18,10 +17,15 @@ async function fetchData() {
   }
 }
 
+// touch glow
 function removeGlow() {
   diceBackground.style.boxShadow = "none";
 }
 
+function addGlow() {
+  diceBackground.style.boxShadow = "0px 0px 20px 5px #52ffa8";
+}
+
 dice.addEventListener("click", fetchData);
-dice.addEventListener("touchstart", fetchData);
+dice.addEventListener("touchstart", addGlow);
 dice.addEventListener("touchend", removeGlow);
