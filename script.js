@@ -29,3 +29,5 @@ function addGlow() {
 dice.addEventListener("click", fetchData);
 dice.addEventListener("touchstart", addGlow);
 dice.addEventListener("touchend", removeGlow);
+dice.addEventListener("touchmove", removeGlow);
+dice.addEventListener("touchcancel", removeGlow);
